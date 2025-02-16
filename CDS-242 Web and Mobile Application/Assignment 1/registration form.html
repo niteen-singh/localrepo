@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+
+            width: 400px;
+            margin: auto;
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            width: 40%;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 55%;
+            padding: 5px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group .radio-group {
+            width: 55%;
+        }
+        .form-group .checkbox-group {
+            width: 55%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        button {
+            padding: 8px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Employee Registration Form</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Title:</label>
+                <div class="radio-group">
+                    <input type="radio" name="title" value="Mr." required> Mr.
+                    <input type="radio" name="title" value="Mrs." required> Mrs.
+                    <input type="radio" name="title" value="Ms." required> Ms.
+                </div>
+            </div>
+            <div class="form-group"><label>First Name:</label><input type="text" name="first_name" required></div>
+            <div class="form-group"><label>Last Name:</label><input type="text" name="last_name" required></div>
+            <div class="form-group"><label>Mail Address1:</label><input type="text" name="mail1" required></div>
+            <div class="form-group"><label>Mail Address2:</label><input type="text" name="mail2"></div>
+            <div class="form-group"><label>City:</label><input type="text" name="city" required></div>
+            <div class="form-group"><label>State:</label>
+                <select name="state">
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                </select>
+            </div>
+            <div class="form-group"><label>Zip:</label><input type="text" name="zip" required></div>
+            <div class="form-group"><label>Upload Photo:</label><input type="file" name="photo"></div>
+            <div class="form-group"><label>Email:</label><input type="email" name="email" required></div>
+            <div class="form-group"><label>Mobile:</label><input type="text" name="mobile" placeholder="+91" required></div>
+            <div class="form-group">
+                <label>Languages Known:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="languages" value="Gujarati"> Gujarati
+                    <input type="checkbox" name="languages" value="Hindi"> Hindi
+                    <input type="checkbox" name="languages" value="English"> English
+                    <input type="checkbox" name="languages" value="Marathi"> Marathi
+                </div>
+            </div>
+            <div class="form-group"><label>Additional Info:</label><textarea name="additional_info" rows="3"></textarea></div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+</body>
+</html>
