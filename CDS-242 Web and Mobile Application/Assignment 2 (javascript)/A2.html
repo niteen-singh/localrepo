@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Sum of Odd Digits</title>
+</head>
+<body>
+
+    <input type="number" id="num">
+    <button onclick="calculate()">Calculate</button>
+    <p id="output"></p>
+
+    <script>
+        function calculate() {
+            let num = document.getElementById("num").value;
+            let digits = num.toString().split("").map(Number); // Convert input to an array of numbers
+            let sum = 0;
+
+            for (let digit of digits) {
+                if (digit % 2 !== 0) {
+                    sum += digit;
+                }
+            }
+
+            document.getElementById("output").innerText = sum;
+        }
+    </script>
+
+</body>
+</html>
