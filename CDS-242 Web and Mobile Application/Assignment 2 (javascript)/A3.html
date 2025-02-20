@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Sum of Odd Digits</title>
+</head>
+<body>
+
+    <input type="date" id="dateInput">
+    <button onclick="checkDate()">Calculate</button>
+    <p id="output"></p>
+
+    <script>
+        function checkDate() {
+             // Get the input date from the user
+            const inputDate = document.getElementById("dateInput").value;
+            const date = new Date(inputDate);
+
+            // Get day and month from the input date
+            const day = date.getDate();
+            const month = date.getMonth() + 1; // Months are 0-indexed, so add 1
+
+            // Display the appropriate message based on the date
+            let message;
+            if (month === 1 && day === 1) {
+                message = "Happy New Year!";
+            }
+            else if (month === 12 && day === 25) {
+                message = "Merry Christmas!";
+            }
+            else if (month === 1 && day === 14) {
+                message = "Happy Makar Sankranti!";
+            }
+            else {
+                message = "Have a good day!";
+            }
+
+      // Show the result in the output div
+      document.getElementById("output").innerHTML = message;
+    }
+    </script>
+
+</body>
+</html>
