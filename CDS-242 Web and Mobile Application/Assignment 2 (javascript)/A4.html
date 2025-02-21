@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age Calculator</title>
+</head>
+<body>
+
+    <label for="birthdate">Enter your birthdate:</label>
+    <input type="date" id="birthdate">
+    <button onclick="calculateAge()">Calculate Age</button>
+
+    <p id="output"></p>
+
+    <script>
+        function calculateAge() {
+            let birthdate = document.getElementById("birthdate").value;
+            let birthYear = new Date(birthdate).getFullYear();
+            let currentYear = new Date().getFullYear();
+            let age = currentYear - birthYear;
+
+            document.getElementById("output").innerText = "Your age is: " + age;
+        }
+    </script>
+
+</body>
+</html>
