@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Sentence Formatter</title>
+</head>
+<body>
+
+    <label for="sentence">Enter a sentence:</label>
+    <input type="text" id="sentence">
+    <button onclick="formatSentence()">Format</button>
+
+    <p id="output"></p>
+
+    <script>
+        function formatSentence() {
+            let sentence = document.getElementById("sentence").value;
+            let formatted = sentence.replace(/\s/g, "#").replace(/\d/g, "$");
+            document.getElementById("output").innerText = "Formatted sentence: " + formatted;
+        }
+    </script>
+
+</body>
+</html>
