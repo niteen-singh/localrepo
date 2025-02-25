@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Functions</title>
+</head>
+<body>
+
+    <label for="text">Enter a sentence:</label><br>
+    <textarea id="text" rows="4" cols="40"></textarea><br><br>
+
+    <label for="searchText">Enter text to search:</label>
+    <input type="text" id="searchText"><br><br>
+
+    <label for="replaceText">Enter replacement text:</label>
+    <input type="text" id="replaceText"><br><br>
+
+    <button onclick="performStringOperations()">Perform Operations</button>
+
+    <p id="output"></p>
+
+    <script>
+        function performStringOperations() {
+            let text = document.getElementById("text").value;
+            let searchText = document.getElementById("searchText").value;
+            let replaceText = document.getElementById("replaceText").value;
+
+            let indexOfResult = text.indexOf(searchText);
+            let lastIndexOfResult = text.lastIndexOf(searchText);
+            let searchResult = text.search(searchText);
+            let replaceResult = text.replace(new RegExp(searchText, "g"), replaceText);
+
+            document.getElementById("output").innerHTML =
+                `<strong>Results:</strong><br>
+                 First Occurrence (indexOf): ${indexOfResult} <br>
+                 Last Occurrence (lastIndexOf): ${lastIndexOfResult} <br>
+                 Search Result (search): ${searchResult} <br>
+                 Replace Result: ${replaceResult}`;
+        }
+    </script>
+
+</body>
+</html>
