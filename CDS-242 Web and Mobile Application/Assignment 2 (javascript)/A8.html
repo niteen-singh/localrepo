@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Name Validation</title>
+</head>
+<body>
+
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name">
+    <button onclick="checkName()">Submit</button>
+
+    <script>
+        function checkName() {
+            let name = document.getElementById("name").value.trim(); // Trim removes extra spaces
+
+            if (name === "") {
+                alert("Please enter a name");
+            } else {
+                alert("Hello, " + name);
+            }
+        }
+    </script>
+
+</body>
+</html>
