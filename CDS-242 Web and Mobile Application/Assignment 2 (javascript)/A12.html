@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Name Validation</title>
+</head>
+<body>
+
+    <label for="name">Enter a text:</label>
+    <input type="text" id="name">
+    <button onclick="checkName()">Submit</button>
+
+    <script>
+        function checkName() {
+            let text = document.getElementById("name").value.trim(); // Trim removes extra spaces
+
+            // Regular expression to check for special symbols or numbers
+            let regex = /[^a-zA-Z\s]/; // Matches anything that is not a letter or space
+
+            if (text === "") {
+                alert("Please enter a text");
+            } else if (regex.test(text)) {
+                alert("Please use only letters and spaces, no special symbols or numbers.");
+            } else {
+                alert("Hello, " + text);
+            }
+        }
+    </script>
+
+</body>
+</html>
